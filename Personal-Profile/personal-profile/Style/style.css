@@ -1,0 +1,62 @@
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+}
+
+/* garis bawah */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* hover */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.parallax-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.bg {
+  top: 0;
+}
+
+.text {
+  top: 40%;
+  font-size: 70px;
+  color: white;
+}
+
+/* CARD */
+.card {
+  width: 320px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(255,0,0,0.4);
+}
